@@ -1,0 +1,28 @@
+<h1 class="title">Edit Todo</h1>
+<div mat-dialog-content>
+  <form #form="ngForm" (ngSubmit)="onFormSubmit(form)">
+    <div class="field">
+      <div class="control">
+        <input
+          type="input"
+          class="input"
+          [ngModel] = "todo.text"  name="text"
+          placeholder="Type todo text here..."
+        />
+      </div>
+    </div>
+
+    <br />
+
+    <div class="field is-grouped is-grouped-right">
+      <div class="control">
+        <button type="button" class="button is-light mx-2" (click)="close()">
+          Cancel
+        </button>
+        <button type="submit" class="button alt-gradient-button">
+            <span class="material-icons">save</span>
+            Save</button>
+      </div>
+    </div>
+  </form>
+</div>
